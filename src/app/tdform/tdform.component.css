@@ -1,0 +1,23 @@
+/* input.ng.form{
+    border-left: 5px solid red;
+} */
+
+input.ng-invalid{
+    border-left: 5px solid red;
+}
+
+input.ng-valid{
+    border-left: 5px solid green;
+}
+section{
+    background-image: url();
+    background-color: silver;
+    /* height: 600px; */
+}
+.BTN-1{
+    margin-left: 148px;
+    padding: 10px 26px 9px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}

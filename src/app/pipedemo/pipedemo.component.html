@@ -1,0 +1,54 @@
+<h1>inbuild pipe concept</h1>
+
+<h2>
+    {{str}}
+</h2>
+
+<h3>
+    {{str | uppercase}} <br>
+    {{str | lowercase}} <br>
+    {{str | titlecase}} <br>
+    {{str | uppercase}} <br>
+    {{str | slice:6 : 7}} <br>
+
+</h3>
+
+<hr>
+
+<h3>
+
+    {{d1}} <br>
+    {{d1 | date }} <br>
+    {{ d1 | date : 'dd/mm/yyyy'}} <br>
+    {{ d1 | date : 'DD/MM/yyyy'}}
+
+
+    <hr>
+
+
+    {{amount}} <br>
+
+    {{amount | currency :'INR'}} <br>
+    {{amount | currency :'JPY'}} <br>
+    {{amount | currency :'SAR'}} <br>
+    {{amount | currency :'EVR'}} <br>
+    {{amount | currency :'USD'}}
+
+    <hr>
+
+    {{emp}} <br>
+    {{emp | json}}
+
+    <hr>
+
+
+
+</h3>
+
+<h1> 
+    pipe square and cube <br>
+
+    {{2 |sqr}} <br>
+
+    {{ 2 | cub}}
+</h1>

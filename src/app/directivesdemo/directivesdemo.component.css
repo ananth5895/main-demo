@@ -1,0 +1,10 @@
+.border{
+border: 5px solid red;
+}
+.bg{
+    background-color: yellow;
+}
+.div{
+width: 200px;
+height: 200px;
+}

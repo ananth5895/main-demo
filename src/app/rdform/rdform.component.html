@@ -1,0 +1,33 @@
+<h1>Reactive driven form</h1>
+
+
+<div class="container">
+
+    <form [formGroup]="loginForm">
+        <div class="form-group">
+            <!-- email -->
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" placeholder="Enter email" name="email" formcontrolName="email">
+            <span class="error" *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">email is
+                required</span>
+        </div>
+        <!-- password -->
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" placeholder="Enter password" name="pswd" formControlName="pswd">
+            <span class="text text-danger"
+                *ngIf="loginForm.get('pswd')?.invalid && loginForm.get('pswd')?.touched">minimum 6 char</span>
+            <span class="text text-success" *ngIf="loginForm.get('pswd')?.valid ">success</span>
+        </div>
+        <!-- first name -->
+        <div class="form-group">
+            <label for="">First Name</label>
+            <input type="text" placeholder="enter name" class="col-md-4" name="ftname" formControlName="ftname">
+            <span class="text text-danger"
+                *ngIf="loginForm.get('ftname')?.invalid && loginForm.get('ftname')?.touched">minimum 2 char</span>
+            <span class="text text-success" *ngIf="loginForm.get('ftname')?.valid ">success</span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>

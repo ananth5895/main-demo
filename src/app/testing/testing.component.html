@@ -1,0 +1,46 @@
+<h3>testing works!</h3>
+
+<!-- 
+#form="ngform" (ngsumbit)="onsubmit(form.value)" -->
+
+<form  style="width: 400px; margin-bottom: 50px;">
+
+
+    <div>
+        <label>first name :</label>
+        <input type="text" required ngModel #fname="ngModel" class="form-control" minlength="3" name="fname"
+            placeholder="enter name">
+        <span class="text text-danger" *ngIF="fname.touched && fname.invalid">name is required</span>
+        <span class="text text-success" *ngIf="fname.valid">successful</span>
+        <span class="text text-danger" *ngIf="fname.errors?.['minlength']">minum3char</span>
+    </div>
+    <div>
+        <label> last name : </label>
+        <input type="text" name="lstn" required ngModel #lstn="ngModel" minlength="3" class="form-control"
+            placeholder="enter name">
+        <span class="text text-danger" *ngIf="lstn.touched && lstn.invalid">name is required</span>
+        <span class="text text-success" *ngIf="lstn.valid">successful</span>
+        <span class="text text-danger" *ngIf="lstn.errors?.['minlength']">min 3 char</span>
+    </div>
+    <div>
+        <label> full name :</label>
+        <input type="text" required ngModel #fn="ngModel" name="fn" class="form-control" minlength="6" placeholder="name">
+        <span class="text text-danger " *ngIf="fn.touched && fn.invalid">name is nnot required</span>
+        <span class="text text-success" *ngIf="fn.valid">successful</span>
+        <span class="" *ngIf="fn.errors?.['minlength']">minimun 6 char</span>
+    </div>
+    <div>
+        <label> phone number :</label>
+        <input type ="text " class="form-control" required ngModel #phone="ngModel" name="phone" minlength="10" placeholder="enter the phone number">
+        <span class="text text-danger" *ngIf="phone.touched && phone.invalid">number is required</span>
+        <span class="text text-success" *ngIf="phone.valid">successfull...</span>
+        <span class="text text-danger" *ngIf="phone.errors?.['minlength']">10 digits</span>
+    </div>
+    
+ 
+
+<button type="submit" >sumbit</button>
+
+<!-- [disabled]="form.invalid" -->
+
+</form>
